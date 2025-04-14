@@ -33,7 +33,7 @@
     margin: 0px;
     font-size: 0.79rem;
     border-radius: 0.1pc;
-    width: 17% !important;
+    width: 19% !important;
     transition: background-color 0.3sease;
     background-color: #28a745;
   }
@@ -44,16 +44,16 @@
     padding: 6px;
     font-size: 0.79rem;
     border-radius: 0.1pc;
-    width: 27% !important;
+    width: 29% !important;
     transition: background-color 0.3sease;
     background-color: #28a745;
     margin-bottom: 1rem;
   }
-  .container {
+/*   .container {
     display: grid !important;
     gap: 10px !important;
     grid-template-columns: 2fr 2fr !important;
-  }
+  } */
   .card{
     background-color: #fff;
     border-radius: 10px;
