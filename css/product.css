@@ -1,5 +1,5 @@
 @media (max-width: 426px) {
-/*   .buy-button {
+  .buy-button {
     
     background-color: #007bff;
     color: white;
@@ -14,7 +14,53 @@
     transition: background-color 0.2sease;
     left: 10.8pc !important;
     top: -7px !important;
-} */
+}
+.navbar-brand img {
+  width: 60px;
+  filter: invert(1);
+}
+
+.navbar {
+  padding: 0px !important;
+}
+
+.navbar-brand {
+  padding: 0px !important;
+}
+
+a.cta-button {
+  text-decoration: auto !important;
+  color: white;
+  margin: 0px !important;
+  padding: 6px;
+  font-size: 0.79rem;
+  border-radius: 0.1pc;
+  width: 17% !important;
+  transition: background-color 0.3s ease;
+  background-color: #28a745;
+  /* Green */
+}
+
+a.cta-b {
+  text-decoration: auto !important;
+  color: white;
+  margin: 0px !important;
+  padding: 6px;
+  font-size: 0.79rem;
+  border-radius: 0.1pc;
+  width: 27% !important;
+  transition: background-color 0.3s ease;
+  background-color: #28a745;
+  /* Green */
+}
+
+a.cta-b:hover {
+  background-color: #218838;
+}
+
+a.cta-button:hover {
+  background-color: #218838;
+}
 /* #filters{
     display: block;
     width: 73% !important;
