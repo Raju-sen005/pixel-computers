@@ -24,9 +24,10 @@
   padding: 0px !important;
 }
 
-.navbar-brand {
-  padding: 0px !important;
-}
+ .navbar-brand {
+    position: relative;
+    top: 12px;
+  }
 
 a.cta-button {
   text-decoration: auto !important;
