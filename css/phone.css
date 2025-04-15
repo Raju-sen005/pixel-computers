@@ -49,11 +49,11 @@
     background-color: #28a745;
     margin-bottom: 1rem;
   }
-/*   .container {
+  .container {
     display: grid !important;
     gap: 10px !important;
-    grid-template-columns: 2fr 2fr !important;
-  } */
+    grid-template-columns: 2fr !important;
+  }
   .card{
     background-color: #fff;
     border-radius: 10px;
