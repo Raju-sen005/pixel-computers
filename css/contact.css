@@ -1,6 +1,6 @@
 @media (max-width: 426px) {
   input {
-    width: 95% !important;
+    width: 94% !important;
     padding: 10px;
     font-size: 16px;
   }
@@ -27,7 +27,7 @@
     margin: 0px !important;
     font-size: 0.79rem;
     border-radius: 0.1pc;
-    width: 19% !important;
+    width: 17% !important;
     transition: background-color 0.3sease;
     background-color: #28a745;
   }
@@ -38,10 +38,10 @@
     padding: 6px;
     font-size: 0.79rem;
     border-radius: 0.1pc;
-    width: 30% !important;
+    width: 27% !important;
     transition: background-color 0.3sease;
     background-color: #28a745;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
   .navbar-brand img {
     width: 60px;
@@ -54,7 +54,7 @@
     overflow: hidden !important;
   }
   textarea {
-    width: 95.5% !important;
+    width: 94.5% !important;
     padding: 10px;
     font-size: 16px;
   }
@@ -65,5 +65,9 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+  }
+  .pxl{
+    position: relative;
+    left: -7%;
   }
 }
