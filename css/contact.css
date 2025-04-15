@@ -1,6 +1,6 @@
 @media (max-width: 426px) {
   input {
-    width: 94% !important;
+    width: 95% !important;
     padding: 10px;
     font-size: 16px;
   }
@@ -54,7 +54,7 @@
     overflow: hidden !important;
   }
   textarea {
-    width: 94.5% !important;
+    width: 95.5% !important;
     padding: 10px;
     font-size: 16px;
   }
