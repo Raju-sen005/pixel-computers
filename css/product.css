@@ -1,6 +1,5 @@
 @media (max-width: 426px) {
   .buy-button {
-    
     background-color: #007bff;
     color: white;
     border: none;
@@ -12,57 +11,61 @@
     font-weight: bold;
     text-align: center;
     transition: background-color 0.2sease;
-    left: 9.8pc !important;
-    top: -5px !important;
-}
-.navbar-brand img {
-  width: 60px;
-  filter: invert(1);
-}
-
-.navbar {
-  padding: 0px !important;
-}
-
- .navbar-brand {
+    left: 10.8pc !important;
+    top: -7px !important;
+  }
+  .navbar-brand img {
+    width: 60px;
+    filter: invert(1);
+  }
+  .navbar-toggler {
+    text-decoration: none;
     position: relative;
     top: 12px;
   }
+  .navbar {
+    padding: 0px !important;
+  }
 
-a.cta-button {
-  text-decoration: auto !important;
-  color: white;
-  margin: 0px !important;
-  padding: 6px;
-  font-size: 0.79rem;
-  border-radius: 0.1pc;
-  width: 19% !important;
-  transition: background-color 0.3s ease;
-  background-color: #28a745;
-  /* Green */
-}
+  .navbar-brand {
+    padding: 0px !important;
+  }
 
-a.cta-b {
-  text-decoration: auto !important;
-  color: white;
-  margin: 0px !important;
-  padding: 6px;
-  font-size: 0.79rem;
-  border-radius: 0.1pc;
-  width: 30% !important;
-  transition: background-color 0.3s ease;
-  background-color: #28a745;
-  /* Green */
-}
+  a.cta-button {
+    text-decoration: auto !important;
+    color: white;
+    margin: 0px !important;
+    padding: 6px;
+    font-size: 0.79rem;
+    border-radius: 0.1pc;
+    width: 17% !important;
+    transition: background-color 0.3s ease;
+    background-color: #28a745;
+    /* Green */
+  }
 
-a.cta-b:hover {
-  background-color: #218838;
-}
+  a.cta-b {
+    text-decoration: auto !important;
+    color: white;
+    margin: 0px !important;
+    padding: 6px;
+    font-size: 0.79rem;
+    border-radius: 0.1pc;
+    width: 27% !important;
+    transition: background-color 0.3s ease;
+    background-color: #28a745;
+    margin-bottom: 1rem !important;
+    /* Green */
+  }
 
-a.cta-button:hover {
-  background-color: #218838;
-}
-/* #filters{
+  a.cta-b:hover {
+    background-color: #218838;
+  }
+
+  a.cta-button:hover {
+    background-color: #218838;
+  }
+  /* #filters{
     display: block;
     width: 73% !important;
     padding: 5px 25px;
@@ -83,4 +86,12 @@ a.cta-button:hover {
     grid-template-columns: 2fr 2fr !important;
   }
 } */
+  footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    border-radius: 9px;
+    margin: 0px !important;
+  }
 }
