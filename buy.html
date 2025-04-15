@@ -1,131 +1,97 @@
-<!-- checkout.html - Flipkart-style Flow -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout - Pixel Computers</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f8f8f8;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
 
-        .step {
-            display: none;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    .product-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-        .step.active {
-            display: block;
-        }
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-        input,
-        select,
-        button {
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
+    .product-title {
+      font-size: 24px;
+      margin-top: 15px;
+    }
 
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    .product-price {
+      font-size: 20px;
+      color: green;
+      margin: 10px 0;
+    }
 
-        button:hover {
-            background-color: #0056b3;
-        }
+    .buy-buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-        .step-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    </style>
+    .buy-button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    .call-button {
+      background-color: #007bff;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="step active" id="login-step">
-        <div class="step-title">Login</div>
-        <input type="text" id="hiddenEmail" placeholder="Email or Phone" required>
-        <button onclick="nextStep('address-step')">Continue</button>
+  <div class="product-card">
+    <img id="productImage" src="" alt="" width="200"/>
+    <div class="product-title" id="productName">Loading...</div>
+    <div class="product-price" id="productPrice"></div>
+
+    <div class="buy-buttons">
+      <a id="callLink" href="#" class="buy-button call-button">Call Now to Buy</a>
+      <a id="whatsappLink" href="#" class="buy-button whatsapp-button">WhatsApp Now to Buy</a>
     </div>
+  </div>
 
-    <div class="step" id="address-step">
-        <div class="step-title">Shipping Address</div>
-        <input type="text" id="hiddenName" placeholder="Full Name" required>
-        <input type="text" id="hiddenAddress" placeholder="Address" required>
-        <input type="text" id="hiddenCity" placeholder="City" required>
-        <input type="hidden" name="Ordered Product" id="ordered-product" value="">
-        <input type="text" id="hiddenPincode" placeholder="Pincode" required>
-        <button onclick="nextStep('payment-step')">Continue to Payment</button>
-    </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const price = urlParams.get('price');
+    const img = urlParams.get('img');
+    document.getElementById('productImage').src = img;
 
-    <div class="step" id="payment-step">
-        <div class="step-title">Payment</div>
-        <select id="payment-method">
-            <option value="COD">Cash on Delivery</option>
-            <option value="UPI">UPI</option>
-            <option value="Card">Credit/Debit Card</option>
-        </select>
-        <button onclick="nextStep('confirm-step')">Place Order</button>
-    </div>
+    // ✅ Fix: Correct IDs used below
+    document.getElementById('productName').innerText = product;
+    document.getElementById('productPrice').innerText = price;
+    document.getElementById('productImage').src = img;
 
-    <div class="step" id="confirm-step">
-        <div class="step-title">Order Placed ✅</div>
-        <p>Thank you for your purchase! Your order has been placed successfully.</p>
-        <button onclick="goHome()">Ok</button>
-    </div>
-
-    <script>
-        function nextStep(stepId) {
-            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-            document.getElementById(stepId).classList.add('active');
-        }
-
-        function goHome() {
-            window.location.href = "/";
-        }
-    </script>
-    <!-- All your steps and form elements -->
-
-    <!-- Place this script at the bottom of the body -->
-    <script>
-        function nextStep(stepId) {
-            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-            document.getElementById(stepId).classList.add('active');
-
-            if (stepId === 'payment-step') {
-                document.getElementById('hiddenEmail').value = document.getElementById('email').value;
-                document.getElementById('hiddenName').value = document.getElementById('name').value;
-                document.getElementById('hiddenAddress').value = document.getElementById('address').value;
-                document.getElementById('hiddenCity').value = document.getElementById('city').value;
-                document.getElementById('hidden.ordered-product').value = document.getElementById('ordered-product').value;
-                document.getElementById('hiddenPincode').value = document.getElementById('pincode').value;
-            }
-        }
-
-        // Get product from URL
-        const params = new URLSearchParams(window.location.search);
-        const productName = params.get('product');
-        if (productName) {
-            document.getElementById('ordered-product').value = productName;
-        }
-    </script>
-</body>
-
-</html>
+    // Optional: set call or WhatsApp link
+    document.getElementById('callLink').href = "tel: 9636015439";
+    document.getElementById('whatsappLink').href = `https://wa.me/919636015439?text=Hi,%20I'm%20interested%20in%20${encodeURIComponent(product)}%20at%20${encodeURIComponent(price)}`;
+  </script>
 
 </body>
-
 </html>
