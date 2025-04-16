@@ -68,6 +68,7 @@
   <div class="product-card">
     <img id="productImage" src="" alt="" width="200"/>
     <div class="product-title" id="productName">Loading...</div>
+    <div class="product-detail" id="productDetail">Loading...</div>
     <div class="product-price" id="productPrice"></div>
 
     <div class="buy-buttons">
@@ -79,18 +80,20 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const product = urlParams.get('product');
+    const specs = urlParams.get('specs');
     const price = urlParams.get('price');
     const img = urlParams.get('img');
     document.getElementById('productImage').src = img;
 
     // ✅ Fix: Correct IDs used below
     document.getElementById('productName').innerText = product;
+    document.getElementById('productDetail').innerText = specs;
     document.getElementById('productPrice').innerText = price;
     document.getElementById('productImage').src = img;
 
     // Optional: set call or WhatsApp link
-    document.getElementById('callLink').href = "tel: 9799046595";
-    document.getElementById('whatsappLink').href = `https://wa.me/919799046595?text=Hi,%20I'm%20interested%20in%20${encodeURIComponent(product)}%20at%20${encodeURIComponent(price)}`;
+    document.getElementById('callLink').href = "tel: 9636015439";
+    document.getElementById('whatsappLink').href = `https://wa.me/919636015439?text=Hi,%20I'm%20interested%20in%20${encodeURIComponent(product)}%20at%20${encodeURIComponent(price)}`;
   </script>
 
 </body>
