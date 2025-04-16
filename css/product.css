@@ -11,8 +11,8 @@
     font-weight: bold;
     text-align: center;
     transition: background-color 0.2sease;
-    left: 10.8pc !important;
-    top: -7px !important;
+    left: 10pc !important;
+    top: -5px !important;
   }
   .navbar-brand img {
     width: 60px;
