@@ -95,10 +95,11 @@
     border-radius: 9px;
     margin: 0px !important;
   }
-/*   .span{
-        display: grid;
+  .span{
+        display: flex;
     text-align: center;
+    width: 100%
     align-items: center;
     justify-content: center;
-  } */
+  }
 }
