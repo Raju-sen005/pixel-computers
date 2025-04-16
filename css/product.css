@@ -96,6 +96,6 @@
     margin: 0px !important;
   }
   .copy{
-    text-align: none;
+    text-align: none !important;
   }
 }
