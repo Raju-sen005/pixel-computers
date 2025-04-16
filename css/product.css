@@ -95,4 +95,7 @@
     border-radius: 9px;
     margin: 0px !important;
   }
+  .copy{
+    width: 50% !important;
+  }
 }
