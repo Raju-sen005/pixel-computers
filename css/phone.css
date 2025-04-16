@@ -91,4 +91,8 @@
     overflow-x: hidden !important;
     margin: 50px 0px 0px 0px !important;
   }
+  .pxl{
+    position: relative;
+    left: -7%;
+  }
 }
