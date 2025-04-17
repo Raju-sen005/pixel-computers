@@ -1,7 +1,7 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f2f2f2;
-    margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f2f2f2;
+  margin: 0;
   margin: 0px;
   padding: 0px;
 }
@@ -63,16 +63,14 @@ h5 {
   font-size: xx-large;
   font-variant: all-petite-caps;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
-
+  font-family: "Inter", sans-serif;
 }
 h4 {
   font-size: xx-large;
   font-variant: all-petite-caps;
   font-weight: 600;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  
+  font-family: "Inter", sans-serif;
 }
 .btn-1 {
   text-decoration: none !important;
@@ -80,8 +78,7 @@ h4 {
   color: #ffffff !important;
   padding: 8px 12px !important;
   border-radius: 7px !important;
-  font-family: 'Inter', sans-serif !important;
-
+  font-family: "Inter", sans-serif !important;
 }
 .container {
   display: grid;
@@ -130,4 +127,10 @@ h3 {
 }
 .navbar-brand {
   padding: 0px !important;
+}
+ul {
+  display: contents;
+}
+li {
+  list-style: none;
 }
