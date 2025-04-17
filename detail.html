@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>detail Product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+
+    .product-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-title {
+      font-size: 24px;
+      margin-top: 15px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      color: green;
+      margin: 10px 0;
+    }
+
+    .buy-buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .buy-button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .call-button {
+      background-color: #007bff;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <img id="productImage" src="" alt="" width="200"/>
+    <div class="product-title" id="productName">Loading...</div>
+    <div class="product-processor" id="productProcessor">Loading...</div>
+    <div class="product-ram" id="productRam">Loading...</div>
+    <div class="product-storage" id="productStorage">Loading...</div>
+    <div class="product-display" id="productDisplay">Loading...</div>
+    <div class="product-graphics" id="productGraphics">Loading...</div>
+    <div class="product-os" id="productOs">Loading...</div>
+
+    <div class="product-price" id="productPrice"></div>
+
+    <div class="buy-buttons">
+      <a id="callLink" href="#" class="buy-button call-button">Call Now to Buy</a>
+      <a id="whatsappLink" href="#" class="buy-button whatsapp-button">WhatsApp Now to Buy</a>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const processor = urlParams.get('processor');
+    const ram = urlParams.get('ram');
+    const storage = urlParams.get('storage');
+    const display = urlParams.get('display');
+    const graphics = urlParams.get('graphics');
+    const os = urlParams.get('os');
+
+    const price = urlParams.get('price');
+    const img = urlParams.get('img');
+    document.getElementById('productImage').src = img;
+
+    // ✅ Fix: Correct IDs used below
+    document.getElementById('productName').innerText = product;
+    document.getElementById('productProcessor').innerText = processor;
+    document.getElementById('productRam').innerText = ram;
+    document.getElementById('productStorage').innerText = storage;
+    document.getElementById('productDisplay').innerText = display;
+    document.getElementById('productGraphics').innerText = graphics;
+    document.getElementById('productOs').innerText = os;
+    document.getElementById('productPrice').innerText = price;
+    document.getElementById('productImage').src = img;
+
+    // Optional: set call or WhatsApp link
+    document.getElementById('callLink').href = "tel: 9636015439";
+    document.getElementById('whatsappLink').href = `https://wa.me/919636015439?text=Hi,%20I'm%20interested%20in%20${encodeURIComponent(product)}%20at%20${encodeURIComponent(price)}`;
+  </script>
+
+</body>
+</html>
