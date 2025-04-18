@@ -95,4 +95,8 @@
     position: relative;
     left: -7%;
   }
+  .follow{
+    position: relative;
+    left: 0px;
+  }
 }
